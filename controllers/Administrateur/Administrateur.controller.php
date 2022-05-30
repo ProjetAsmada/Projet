@@ -26,18 +26,6 @@ class AdministrateurController extends MainController
         $this->genererPage($data_page);
     }
 
-    public function ajouterMission()
-    {
-    }
-
-    public function modifierMission()
-    {
-    }
-
-    public function supprimerMission()
-    {
-    }
-
     //*** GESTION ADMINISTRATEURS ***//
     public function gestionAdministrateurs()
     {
@@ -52,7 +40,6 @@ class AdministrateurController extends MainController
         ];
         $this->genererPage($data_page);
     }
-
 
     public function pageErreur($msg)
     {

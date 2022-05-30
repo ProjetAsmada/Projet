@@ -1,5 +1,11 @@
 <div class="text-center">
         <h1>Profil de <?= $utilisateur['login'] ?></h1>
+
+            <p> Prenom : <?= $utilisateur['prenom'] ?> </p>
+            <p> Nom : <?= $utilisateur['nom'] ?> </p>
+            <p> Telephone : <?= $utilisateur['telephone'] ?> </p>
+            <p>Score :</p>
+
     <div>
         <div>
             <img src="<?= URL; ?>public/Assets/images/<?= $utilisateur['image'] ?>" width="100px" alt="photo de profil" />

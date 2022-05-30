@@ -56,11 +56,11 @@ class UtilisateurController extends MainController{
     }
 
     //*** CREATION DE COMPTE UTILISATEUR ***//
-    public function validation_creerCompte($login,$password,$mail){
+    public function validation_creerCompte($login,$password,$mail,$prenom,$nom,$telephone){
         if($this->utilisateurManager->verifLoginDisponible($login)){
             $passwordCrypte = password_hash($password,PASSWORD_DEFAULT);
             $clef = rand(0,9999);
-            if($this->utilisateurManager->bdCreerCompte($login,$passwordCrypte,$mail,$clef,"profils/profil.png","utilisateur")){
+            if($this->utilisateurManager->bdCreerCompte($login,$passwordCrypte,$mail,$clef,"profils/profil.png","utilisateur",$prenom,$nom,$telephone)){
                 $this->sendMailValidation($login,$mail,$clef);
                 Toolbox::ajouterMessageAlerte("La compte a été créé, Un mail de validation vous a été envoyé !", Toolbox::COULEUR_VERTE);
                 header("Location: ".URL."login");
@@ -199,6 +199,23 @@ class UtilisateurController extends MainController{
             "template" => "views/common/template.php"
         ];
         $this->genererPage($data_page);
+    }
+
+    //CANDIDATER
+    public function candidater()
+    {
+        $data_page = [
+            "page_description" => "Page de candidature",
+            "page_title" => "Page de candidature",
+            "view" => "views/Utilisateur/formulaireCandidature.view.php",
+            "template" => "views/common/template.php"
+        ];
+        $this->genererPage($data_page);
+    }
+
+    //CONSULTER LES REPONSES DES ADMINS SUR LES CANDIDATURES DE L'UTILISATEUR
+    public function historiqueCandidatures(){
+        
     }
 
     public function pageErreur($msg){

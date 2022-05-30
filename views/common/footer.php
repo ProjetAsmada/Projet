@@ -7,32 +7,29 @@
             </small>
         </div>
         <div class="col-6 col-md">
-            <h5>Features</h5>
+            <h5>L'équipe</h5>
             <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Rachid Boughelam</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Andréa Remolina</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Ibrahim Boughanime</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Lucas Legas</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Camille Dang</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Romuald Hanriot</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
-            <h5>Resources</h5>
+            <h5>Notre tutrice</h5>
             <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Brigitte Groleas</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
-            <h5>About</h5>
+            <h5>A propos</h5>
             <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">UVSQ</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Licence pro informatique</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Applications et données</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Promotion 2021/2022</a></li>
             </ul>
         </div>
         </div>
