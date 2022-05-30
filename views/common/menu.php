@@ -11,7 +11,7 @@
 
         <?php if (!Securite::estConnecte()) : ?>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="<?= URL; ?>accueil">Accueil</a>
+            <a class="nav-link" aria-current="page" href="https://www.asmada.org">Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="<?= URL; ?>missions">Consultation des missions</a>
@@ -32,6 +32,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="<?= URL; ?>compte/missions">Candidater aux Missions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="<?= URL; ?>compte/mesCandidatures">Mes candidatures</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="<?= URL; ?>compte/autoevaluation">S'auto évaluer</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="<?= URL; ?>compte/deconnexion">Se déconnecter</a>

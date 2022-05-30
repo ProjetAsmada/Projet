@@ -23,7 +23,7 @@
                     </td>
                     <!-- suppression !-->
                     <td class="align-middle">
-                        <form method="POST" action="<?= URL ?>administration/suppression_mission" onclick="return confirm('Supprimer la mission <?= $mission['nom_mission'] ?> ?');">
+                        <form method="POST" action="<?= URL ?>administration/suppression_mission" onclick="return confirm('Supprimer la mission <?= $mission['nom_mission'] ?> ? Attention s\'il y a une candidature, elle sera également supprimée !');">
                             <input type="hidden" name="id_mission" value="<?= $mission['id_mission'] ?>" />
                             <button class="btn btn-danger" type="submit">Supprimer</button>
                         </form>

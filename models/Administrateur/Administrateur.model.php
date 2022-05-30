@@ -32,4 +32,5 @@ class AdministrateurManager extends MainManager{
         $req->closeCursor();
         return $datas;
     }
+
 }

@@ -12,13 +12,16 @@ require_once("./controllers/Administrateur/Administrateur.controller.php");
 require_once("./controllers/Administrateur/GestionBenevoles.controller.php");
 require_once("./controllers/Administrateur/GestionAdministrateurs.controller.php");
 require_once("./controllers/Administrateur/GestionMissions.controller.php");
+require_once("./controllers/Administrateur/GestionCandidatures.controller.php");
 
 $visiteurController = new VisiteurController();
 $utilisateurController = new UtilisateurController();
 $administrateurController = new AdministrateurController();
+
 $administrateurGestionBenevolesController = new AdministrateurGestionBenevolesController();
 $administrateurGestionAdministrateursController = new AdministrateurGestionAdministrateursController();
 $administrateurGestionMissionsController = new AdministrateurGestionMissionsController();
+$administrateurGestionCandidaturesController = new AdministrateurGestionCandidaturesController();
 
 try {
     if (empty($_GET['page'])) {
@@ -70,7 +73,10 @@ try {
                 $login = Securite::secureHTML($_POST['login']);
                 $password = Securite::secureHTML($_POST['password']);
                 $mail = Securite::secureHTML($_POST['mail']);
-                $utilisateurController->validation_creerCompte($login, $password, $mail);
+                $prenom = Securite::secureHTML($_POST['prenom']);
+                $nom = Securite::secureHTML($_POST['nom']);
+                $telephone = Securite::secureHTML($_POST['telephone']);
+                $utilisateurController->validation_creerCompte($login, $password, $mail, $prenom, $nom, $telephone);
             } else {
                 Toolbox::ajouterMessageAlerte("Les informations sont obligatoires !", Toolbox::COULEUR_ROUGE);
                 header("Location: " . URL . "creerCompte");
@@ -132,6 +138,12 @@ try {
                     case "missions":
                         $utilisateurController->missions();
                         break;
+                    case "candidature":
+                        $utilisateurController->candidater();
+                        break;
+                    case "mesCandidatures":
+                        $utilisateurController->historiqueCandidatures();
+                        break;
                     default:
                         throw new Exception("La page n'existe pas");
                 }
@@ -184,7 +196,10 @@ try {
                             $mail = Securite::secureHTML($_POST['mail']);
                             $est_valide = Securite::secureHTML($_POST['est_valide']);
                             $role = Securite::secureHTML($_POST['role']);
-                            $administrateurGestionBenevolesController->validation_creationBenevole($login, $password, $mail, $est_valide, $role);
+                            $prenom = Securite::secureHTML($_POST['prenom']);
+                            $nom = Securite::secureHTML($_POST['nom']);
+                            $telephone = Securite::secureHTML($_POST['telephone']);
+                            $administrateurGestionBenevolesController->validation_creationBenevole($login, $password, $mail, $est_valide, $role, $prenom, $nom, $telephone);
                         } else {
                             Toolbox::ajouterMessageAlerte("Il manque une information ou un caractère interdit a été saisi", Toolbox::COULEUR_ROUGE);
                             header("Location: " . URL . "administration/gestionBenevoles");
@@ -266,6 +281,10 @@ try {
                     case "suppression_mission":
                         $administrateurGestionMissionsController->suppression_mission((int)Securite::secureHTML($_POST['id_mission']));
                         break;
+
+                        case "gestionCandidatures":
+                            $administrateurGestionCandidaturesController->gestionCandidatures();
+                            break;
 
                     default:
                         throw new Exception("La page n'existe pas");
